@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pwsztar.domain.dto.CreateMovieDto;
 import pl.edu.pwsztar.domain.dto.MovieDto;
+import pl.edu.pwsztar.domain.entity.Movie;
 import pl.edu.pwsztar.service.MovieService;
 
 import java.util.List;
@@ -44,6 +45,7 @@ public class MovieApiController {
         LOGGER.info("create movie: {}", createMovieDto);
 
         // TODO: Prosze dokonczyc implementacje
+        Movie movie = movieService.save(createMovieDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
