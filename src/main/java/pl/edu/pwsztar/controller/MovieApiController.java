@@ -45,7 +45,7 @@ public class MovieApiController {
         LOGGER.info("create movie: {}", createMovieDto);
 
         // TODO: Prosze dokonczyc implementacje
-        Movie movie = movieService.save(createMovieDto);
+        movieService.save(createMovieDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
