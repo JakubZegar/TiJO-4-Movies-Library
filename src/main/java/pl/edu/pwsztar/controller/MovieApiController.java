@@ -14,6 +14,8 @@ import pl.edu.pwsztar.service.MovieService;
 
 import java.util.List;
 
+//      http://localhost:63342/tijo_movies/target/classes/frontend/movies.html
+
 @Controller
 @RequestMapping(value="/api")
 public class MovieApiController {
