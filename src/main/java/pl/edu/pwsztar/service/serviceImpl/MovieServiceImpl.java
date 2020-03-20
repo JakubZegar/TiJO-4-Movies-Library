@@ -11,8 +11,6 @@ import pl.edu.pwsztar.domain.mapper.CreateMovieMapper;
 import pl.edu.pwsztar.domain.mapper.MovieListMapper;
 import pl.edu.pwsztar.domain.repository.MovieRepository;
 import pl.edu.pwsztar.service.MovieService;
-
-
 import java.util.List;
 
 @Service

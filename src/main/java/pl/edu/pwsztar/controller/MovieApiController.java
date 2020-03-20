@@ -13,8 +13,7 @@ import pl.edu.pwsztar.domain.dto.MovieDto;
 import pl.edu.pwsztar.service.MovieService;
 
 import java.util.List;
-
-//      http://localhost:63342/tijo_movies/target/classes/frontend/movies.html
+//http://localhost:63342/tijo_movies/target/classes/frontend/movies.html
 
 @Controller
 @RequestMapping(value="/api")
@@ -43,7 +42,6 @@ public class MovieApiController {
     public ResponseEntity<?> createMovie(@RequestBody CreateMovieDto createMovieDto) {
         LOGGER.info("create movie: {}", createMovieDto);
 
-        // TODO: Prosze dokonczyc implementacje
         movieService.save(createMovieDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
@@ -53,7 +51,6 @@ public class MovieApiController {
     public ResponseEntity<?> deleteMovie(@PathVariable Long id) {
         LOGGER.info("delete movie: {}", id);
 
-        // TODO: Usuwanko
         movieService.deleteById(id);
         return  new ResponseEntity<>(HttpStatus.OK);
     }

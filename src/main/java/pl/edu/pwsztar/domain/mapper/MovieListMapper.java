@@ -22,7 +22,6 @@ public class MovieListMapper {
             movieDto.setYear(movie.getYear());
 
             moviesDto.add(movieDto);
-
         }
 
         return moviesDto;
