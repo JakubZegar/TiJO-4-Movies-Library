@@ -1,0 +1,9 @@
+pl\edu\pwsztar\controller\MovieApiController.class
+pl\edu\pwsztar\domain\dto\CreateMovieDto.class
+pl\edu\pwsztar\domain\mapper\MovieListMapper.class
+pl\edu\pwsztar\Application.class
+pl\edu\pwsztar\service\serviceImpl\MovieServiceImpl.class
+pl\edu\pwsztar\domain\repository\MovieRepository.class
+pl\edu\pwsztar\domain\entity\Movie.class
+pl\edu\pwsztar\service\MovieService.class
+pl\edu\pwsztar\domain\dto\MovieDto.class
