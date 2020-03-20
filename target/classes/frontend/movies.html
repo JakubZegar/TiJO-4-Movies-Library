@@ -19,7 +19,7 @@
   				html += '<h3>' + value.title + '</h3>';
   				html += '<p class="title">Rok produkcji</p>';
   				html += '<p>' + (value.year === undefined ? "????" : value.year) + '</p>';
-				html += '<p><button>ID: ' + value.movieId + '</button></p>';
+				html += '<p><button onClick="deleteMovie('+value.movieId+')" >ID: ' + value.movieId + '</button></p>';
 				html += '</div>';
         	});
 
@@ -31,6 +31,18 @@
 		function isImage(url) {
             return url.indexOf(".jpg") !== -1 || url.indexOf(".png") !== -1;
 		}
+
+		function deleteMovie(id) {
+			fetch('http://127.0.0.1:8080/api/movies/' + id, {
+				method: 'DELETE',
+				headers: {
+					'Content-type': 'application/json; charset=UTF-8'
+				},
+			}).then(response => response.json())
+		.catch(err => console.log(err))
+		.then( () => { window.location.reload(true) });
+		}
+
 
 		function getPlaceholder() {
 		    return 'https://www-morganscloud-com.exactdn.com/wp-content/ewww/lazy/placeholder-250x356.png';
