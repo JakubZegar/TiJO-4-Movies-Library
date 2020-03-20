@@ -10,4 +10,5 @@ public interface MovieService {
 
     List<MovieDto> findAll();
     Movie save(CreateMovieDto createMovieDto);
+    void deleteById(Long id);
 }

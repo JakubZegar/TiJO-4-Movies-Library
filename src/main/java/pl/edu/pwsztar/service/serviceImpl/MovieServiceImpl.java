@@ -45,4 +45,9 @@ public class MovieServiceImpl implements MovieService {
         return movieRepository.save(createMovieMapper.createMovieDtoToMovie(createMovieDto));
     }
 
+    @Override
+    public void deleteById(Long id){
+        movieRepository.deleteById(id);
+    }
+
 }

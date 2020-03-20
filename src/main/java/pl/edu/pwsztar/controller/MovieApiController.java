@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pwsztar.domain.dto.CreateMovieDto;
 import pl.edu.pwsztar.domain.dto.MovieDto;
-import pl.edu.pwsztar.domain.entity.Movie;
 import pl.edu.pwsztar.service.MovieService;
 
 import java.util.List;
@@ -47,5 +46,15 @@ public class MovieApiController {
         // TODO: Prosze dokonczyc implementacje
         movieService.save(createMovieDto);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @CrossOrigin
+    @RequestMapping(value="/movies/{id}",method = { RequestMethod.GET, RequestMethod.DELETE})
+    public ResponseEntity<?> deleteMovie(@PathVariable Long id) {
+        LOGGER.info("delete movie: {}", id);
+
+        // TODO: Usuwanko
+        movieService.deleteById(id);
+        return  new ResponseEntity<>(HttpStatus.OK);
     }
 }
